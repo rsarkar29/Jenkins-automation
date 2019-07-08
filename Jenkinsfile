@@ -24,7 +24,7 @@ node {
         /* 
 			You would need to first register with DockerHub before you can push images to your account
 		*/
-        docker.withRegistry('rudranil29/drupal-pinnekar', 'dockerhub') {
+        docker.withRegistry('https://index.docker.io', 'dockerhub') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
             } 
